@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ความคืบหน้า</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .progress-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .step::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            height: 2px;
+            width: 100px;
+            background: #4CAF50;
+            left: 50%;
+            z-index: -1;
+        }
+        .step:first-child::after {
+            content: none;
+        }
+        .circle {
+            width: 30px;
+            height: 30px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        .label {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>ความคืบหน้า</h2>
+<div class="progress-container">
+    <div class="step">
+        <div class="circle">ผู้ใช้</div>
+        <div class="label">ร้องขออัปเดต</div>
+    </div>
+    <div class="step">
+        <div class="circle">✔</div>
+        <div class="label">หัวหน้างาน</div>
+    </div>
+    <div class="step">
+        <div class="circle">✔</div>
+        <div class="label">หัวหน้ากลุ่มงาน</div>
+    </div>
+    <div class="step">
+        <div class="circle">✔</div>
+        <div class="label">ผู้ตรวจสอบ</div>
+    </div>
+    <div class="step">
+        <div class="circle">✔</div>
+        <div class="label">ผู้อนุมัติ</div>
+    </div>
+</div>
+
+</body>
+</html>
